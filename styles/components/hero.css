@@ -1,0 +1,128 @@
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem !important;
+}
+
+.hero__img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 30% 70% 36% 64% / 54% 25% 75% 46%;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(225, 29, 72, 0.39);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(225, 29, 72, 0.39);
+  box-shadow: 0px 0px 9px 3px rgba(225, 29, 72, 0.39);
+  animation: borderAnimation 7.5s infinite;
+}
+
+.hero__subtitle {
+  color: var(--clr-slate600);
+  font-size: var(--size-M);
+}
+
+.hero__title {
+  color: var(--clr-slate400);
+  font-size: var(--size-4XL);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.9 !important;
+}
+
+.hero__description {
+  max-width: 65ch;
+  color: var(--clr-slate600);
+  font-size: var(--size-S);
+}
+
+.hero__btn {
+  text-transform: capitalize;
+  font-size: var(--size-S);
+}
+
+/* XS */
+@media (min-width: 475px) {
+  .hero {
+    gap: 1.5rem;
+  }
+
+  .hero__img {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-L);
+  }
+
+  .hero__title {
+    font-size: var(--size-5XL);
+  }
+
+  .hero__description {
+    font-size: var(--size-M);
+  }
+
+  .hero__btn {
+    font-size: var(--size-M);
+  }
+}
+
+/* L */
+@media (min-width: 1024px) {
+  .hero__img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-2XL);
+  }
+
+  .hero__title {
+    font-size: var(--size-7XL);
+  }
+
+  .hero__description {
+    font-size: var(--size-L);
+  }
+
+  .hero__btn {
+    font-size: var(--size-L);
+  }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+  .hero {
+    gap: 2rem;
+  }
+  .hero__img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-4XL);
+  }
+
+  .hero__title {
+    font-size: var(--size-9XL);
+  }
+
+  .hero__description {
+    font-size: var(--size-XL);
+  }
+
+  .hero__btn {
+    font-size: var(--size-XL);
+  }
+}
+
+@keyframes borderAnimation {
+  50% {
+    border-radius: 70% 30% 64% 36% / 46% 75% 25% 54%;
+  }
+}
